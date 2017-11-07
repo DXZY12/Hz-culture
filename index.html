@@ -1,0 +1,325 @@
+<html>
+	<head>
+		<title>徽州文化</title>
+		<link rel="stylesheet" href="style/base.css" type="text/css">
+		<link rel="stylesheet" href="style/slider.css" type="text/css">
+		<script type="text/javascript" src="js/jquery.js"></script>
+		<script type="text/javascript" src="js/jquery.slider.pack.js"></script>
+		<script type="text/javascript" src="js/jquery.easing.js"></script>
+		<script type="text/javascript">
+		jQuery(function() {
+			jQuery('#cycle-prev, #cycle-next').css({opacity: '0'});
+			jQuery('.cycleslider-wrap').hover(function(){
+				jQuery('#cycle-prev',this).stop().animate({left: '-31', opacity: '1'},200,'easeOutCubic');
+				jQuery('#cycle-next',this).stop().animate({right: '-31', opacity: '1'},200,'easeOutCubic');	 
+			}, function() {
+				jQuery('#cycle-prev',this).stop().animate({left: '-50', opacity: '0'},400,'easeInCubic');
+				jQuery('#cycle-next',this).stop().animate({right: '-50', opacity: '0'},400,'easeInCubic');		
+			});
+			
+			jQuery(".cycleslider-wrap").fadeIn(1000);
+			jQuery(".slider-wrap .loader").css({display: "none"});
+			jQuery("#slider").cycle({
+				fx:  "scrollDown",
+				speed:  "800", 
+				timeout: "1000",
+				easing:  "easeOutBounce",
+				next:  "#cycle-next",
+				prev:  "#cycle-prev",
+				pager:  "#cycle-nav"
+			});
+
+		});
+		</script>
+		<style type="text/css">
+			body{
+				
+				background:#d7d6d1;
+				margin:0 auto;
+			}
+			span{
+				float:right;
+				width:50px;
+				margin-top:50px;
+				margin-right:25px;
+				font-size:20px;
+				font-family:"华文新魏";
+				cursor:pointer;
+			}
+			ul{
+				list-style-type:none;
+			}
+			#mainMenu li{
+				float:left;
+				border-left:1px solid #aaa;
+				border-right:1px solid #ffffff;
+			}
+			#mainMenu li a{
+				text-decoration: none;
+				padding:10px 32px;
+				vertical-align:middle;
+				color:white;
+				font-family:"华文新魏";
+				font-size:25px;
+			}
+			#mainMenu li a:hover{
+				background-image:url('images/web_skin_1-2_05.jpg');
+				background-repeat:no-repeat;
+				color:white;
+				background-position:center center;
+			}
+			#Container{
+				height:768px;
+				width:1024px;
+				margin:0 auto;
+			}
+			#Header{
+				height:250px;
+				width:1024px;
+				background-image:url("images/top_menu_beijing.jpg");
+			}
+			#Header_logo{
+				height:200px;
+				width:1024px;
+				background:white;
+			}
+			#top_menu{
+				height:100px;
+				margin-bottom:5px;
+			}
+			#top_menu a{
+				color:black;
+			}
+			#top_menu a:hover{
+				text-decoration: 
+			}
+			#mainMenu{
+				height:35px;
+				width:1024px;
+			}
+			
+			#Pagebody{
+				height:478px;
+				width:1024px;
+			}
+			#xinwen{
+				height:398px;
+				width:470px;
+			}
+			#link{
+				height:80px;
+				width:1024px;
+				background-image:url("images/link.png");
+			}
+			#Footer{
+				background-image:url("images/Footer_beijing_2.jpg");
+				height:20px;
+				width:1004px;
+				padding:10px;
+				color:white;
+				font-family:"华文新魏";
+				font-size:20px;
+			}
+			.bk_left{
+				float:left;
+				width:150px;
+				height:100px;
+			}
+			.bk_right{
+				float:right;
+				width:150px;
+				height:100px;
+			}
+			.logo{
+				float:left;
+				width:300px;
+				height:100px;
+				margin-left:50px;
+			}
+			.logo_1{
+				float:left;
+				margin-top:15px;
+			}
+			.span_1{
+				width:100px;
+			}
+			.tb{
+				height:394px;
+				width:470px;
+				background:white;
+				font-size:10px;
+				font-family:"楷体"
+			}
+			#mainMenu .firstChild{
+				border-left:none;
+			}
+			#mainMenu .lastChild{
+				border-right:none;
+			}
+			.slider-wrap{
+				width:550px;
+				margin:auto;
+				float:right;
+			}
+			#link_logo{
+				padding-top:30px;
+				padding-left:40px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="Container">
+			<div id="Header">
+				<div id="Header_logo">
+					<img class="bk_left" src="images/边框2.jpg" alt="">
+					<img class="logo_1" src="images/logo_1.jpg" width="724" height="85" border="0" alt="">
+					<img class="bk_right" src="images/边框.jpg" alt="">
+					<img class="logo" src="images/logo.jpg" alt="logo_徽州文化">
+					<div id="top_menu">
+						<span><a href="html/index1.html">注册</a></span>
+						<span>┃</span>
+						<span><a href="html/index1.html">登录</a></span>
+					</div>
+				</div>
+				<div id="mainMenu">
+					<ul>
+						<li class="firstChild"><a href="index.html">首页</a></li>
+						<li><a href="html/jian_zhu.html">徽派建筑</a></li>
+						<li><a href="html/mei_shi.html">徽派美食</a></li>
+						<li><a href="html/min_ren.html">徽派名人</a></li>
+						<li><a href="html/lv_you.html">文化旅游</a></li>
+						<li class="lastChild"><a href="html/lian_xi.html">联系我们</a></li>
+					</ul>
+				</div>
+			</div>
+			<div id="Pagebody">
+				<div class="slider-wrap col-width">
+					<div class="cycleslider-wrap" style="display: block;">
+						<div id="slider" class="cycleslider" style="position: relative; width: 530px; height: 350px;">
+							<div class="cycle-slider"><a href="#"><img src="images/3.jpg" width="530" height="350" alt=""></a></div>
+							<div class="cycle-slider"><a href="#"><img src="images/4.jpg" width="530" height="350" alt=""></a></div>
+							<div class="cycle-slider"><a href="#"><img src="images/5.jpg" width="530" height="350" alt=""></a></div>
+							<div class="cycle-slider"><a href="#"><img src="images/6.jpg" width="530" height="350" alt=""></a></div>
+						</div>
+						<a id="cycle-prev" href="#" style="opacity: 0; left: -50px;">Prev</a>
+						<a id="cycle-next" href="#" style="opacity: 0; right: -50px;">Next</a>
+						<div id="cycle-nav">
+						</div>
+					</div>
+					<div class="loader" style="display: none;"></div>
+				</div>
+				<div id="xinwen">
+						<table class="tb" border="0" cellspacing="0" cellpadding="0">
+							<tbody>
+								<tr>
+									<td>
+										<img src="images/tblr1.jpg" width="470" height="15"> 
+									</td>
+								</tr>
+								<tr>
+									<td class="titlePad0">
+										<img src="images/12.png" width="8" height="20" align="absmiddle"> 
+										<a href="#" target="_blank" class="titleLink">全省文化信息联播</a>
+									</td>
+								</tr>
+								<tr>
+									<td class="tbPadd">
+										<div>
+											<ul class="ul2" style="border-bottom: #999 1px dashed;">
+												<li>
+													<div class="left ellipsis">
+														<a href="#" title="芜湖市文化委认真贯彻《艺术品经营管理办法》精神" target="_blank">芜湖市文化委认真贯彻《艺术品经营管理办法》精神</a>
+													</div>
+													<div class="right">06-21</div>
+												</li>
+												<li>
+													<div class="left ellipsis">
+													   <a href="#" title="亳州市文化旅游局召开“两学一做”专题会议" target="_blank">亳州市文化旅游局召开“两学一做”专题会议</a>
+													</div>
+													<div class="right">06-21</div>
+												</li>  
+												<li>
+													<div class="left ellipsis">
+														<a href="#" title="黄山市徽州区：壮大文化产业  发展魅力经济" target="_blank">黄山市徽州区：壮大文化产业  发展魅力经济</a>
+													</div>
+													<div class="right">06-21</div>
+												</li>	  
+												<li>
+													<div class="left ellipsis">
+														<a href="#" title="合肥市文广新局举办“两学一做”主题演讲比赛" target="_blank">合肥市文广新局举办“两学一做”主题演讲比赛</a>
+													</div>
+													<div class="right">06-21</div>
+												</li>
+											</ul>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td class="titlePad0">
+										<img src="images/12.png" alt="" width="8" height="20" align="absmiddle"> 
+										<a href="#" target="_blank" class="titleLink">通知公告</a> 
+									</td>
+								</tr>
+								<tr>
+									<td class="tbPadd">
+										<div>
+											<ul class="ul2">
+												<li>
+													<div class="left ellipsis">
+														<a href="#" title="中共安徽省文化厅党组印发关于成立“四个专项整治”工作小组的通知和落实省委省政府《关于基层党组织长期不换届专项整治工作方案》等四个专项整治工作方案的通知" target="_blank">中共安徽省文化厅党组印发关于成立“四个专项整治”工作小组的通知和落实省委省政府《关于基层党组织长期不换届专项整治工作方案》等四个专项整治工作方案的通知</a>
+													</div>
+													<div class="right">06-22</div>
+												</li>
+												<li>
+													<div class="left ellipsis">
+														<a href="#" title="安徽省文化厅关于开展政府购买基层公共文化服务岗位专项调研的通知" target="_blank">安徽省文化厅关于开展政府购买基层公共文化服务岗位专项调研的通知</a>
+													</div>
+													<div class="right">06-20</div>
+												</li>
+												<li>
+													<div class="left ellipsis">
+														  <a href="#" title="关于同意安徽艺术职业学院委托铜陵市文化馆等41家单位承办考级的批复" target="_blank">关于同意安徽艺术职业学院委托铜陵市文化馆等41家单位承办考级的批复</a>
+													  </div>
+													  <div class="right">06-17</div>
+												</li>
+												<li>
+													<div class="left ellipsis">
+														<a href="#" title="关于同意安徽艺术职业学院2016年度社会艺术水平考级简章备案的批复" target="_blank">关于同意安徽艺术职业学院2016年度社会艺术水平考级简章备案的批复</a>
+													</div>
+													<div class="right">06-17</div>
+												</li>
+												<li>
+													<div class="left ellipsis">
+														<a href="#" title="关于同意中国舞蹈家协会委托安徽省舞蹈家协会等26家单位承办考级的函" target="_blank">关于同意中国舞蹈家协会委托安徽省舞蹈家协会等26家单位承办考级的函</a>
+													</div>
+													<div class="right">06-17</div>
+												</li>
+											</ul>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>
+									  <div style="width:470px; height:17px;">
+											<img src="images/tblr2.png" width="470" height="17">
+									  </div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+				</div>
+				<div id="link">
+					<div id="link_logo">
+						<a href="http://www.AH.GOV.CN/" target="_blank"><img src="images/AH.JPG" alt="中国安徽"></a>
+						<a href="http://www.ahage.net/" target="_blank"><img src="images/AHAGE.JPG" hspace="12" alt="安徽文化网"></a>
+						<a href="http://www.ahwh.gov.cn/" target="_blank"><img src="images/AHWH.JPG" alt="安徽省文化厅"></a>
+						<a href="http://www.mcprc.gov.cn/" target="_blank"><img src="images/mcprc.JPG" hspace="12" alt="中华人民共和国文化部"></a>
+					</div>	
+				</div>
+			</div>
+			<div id="Footer">
+				<center>徽州文化&nbsp;版权所有:刘志远、盛益慧、钱利&nbsp;&nbsp;网络3153班&nbsp;&nbsp;安徽机电职业技术学院</center>
+			</div>
+		</div>
+	</body>
+</html>
